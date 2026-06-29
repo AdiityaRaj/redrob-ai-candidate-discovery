@@ -13,6 +13,4 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 
-RUN chmod +x tests/run_pipeline.sh
-
-ENTRYPOINT ["./tests/run_pipeline.sh"]
+CMD ["streamlit","run","app/dashboard.py","--server.port=8501","--server.address=0.0.0.0"]
