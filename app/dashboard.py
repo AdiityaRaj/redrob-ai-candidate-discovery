@@ -1,9 +1,13 @@
-import os
-import json
-from typing import Optional, List, Dict, Tuple
-
+import streamlit as str_st
 import pandas as pd
-import streamlit as st
+import json
+import sys
+import os
+from typing import Optional, List, Dict, Tuple
+from io import BytesIO
+
+# Absolute path safeguard fallback lane
+sys.path.insert(0, os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
 
 from src.stage5_explanation.metadata_reasoner import LocalMetadataDrivenReasoner
 from src.stage4_reranking.business_rules import ProductionBusinessRulesEngine  # keep your path
