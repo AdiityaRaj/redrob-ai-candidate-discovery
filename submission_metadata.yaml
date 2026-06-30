@@ -1,72 +1,60 @@
-# Redrob Hackathon — Submission Metadata Template
-#
-# Copy this file to your repo root as `submission_metadata.yaml` and fill it in.
-# The fields here should match what you submit via the portal at upload time.
-# Stage 3 review uses this file to verify your portal metadata.
-
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "RankForge AI"  # Used in leaderboard and announcements
+team_name: "RankForge AI"  
 
 primary_contact:
   name: "Aditya Raj"
-  email: "rajaditya2424@gmail.com"   # Used for all organizer communication
-  phone: "+91-8102767421"        # Used for top-50 / top-10 outreach
+  email: "rajaditya2424@gmail.com"   
+  phone: "+91-8102767421"        
 
 team_members:
   - name: "Aditya Raj"
     email: "rajaditya2424@gmail"
-    role: "AI Engineer"          # Optional, e.g. "Team Lead", "Backend", "Data"
-  # Add more members as needed; solo participants list just one member
+    role: "AI Engineer"          
+  
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
 github_repo: "https://github.com/AdiityaRaj/redrob-ai-candidate-discovery"
-# Required. Must be reachable. Private repos OK if you can grant organizer
-# access at Stage 3 (the email to add will be communicated then).
 
-sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
-# Required. A working hosted environment where the ranker can be run on a small
-# candidate sample. See Section 10.5 of submission_spec.md for acceptable
-# platforms (HuggingFace Spaces, Streamlit Cloud, Replit, Colab, Docker, Binder).
+sandbox_link: "https://adiityaraj-redrob-ai-candidate-discovery-appdashboard-tjrltp.streamlit.app/"
 
 reproduce_command: "python main_cli.py"
-# The single command that produces submission.csv from candidates.jsonl.
-# Should run end-to-end within 5 minutes on CPU with 16GB RAM and no network.
 
 # ============================================================================
 # Compute environment
 # ============================================================================
 compute:
-  platform: "HP Laptop 15s-gr0xxx"                    # Or: "AWS EC2 c5.4xlarge", "Local Linux box", etc.
-  cpu_cores: 4                                  # Number of CPU cores used
-  ram_gb: 16                                    # Available RAM in GB
-  python_version: "Python 3.12.5  "                      # python --version
-  os: "Windows 11 Home Single Language 25H2"                              # Or "Ubuntu 22.04 LTS", etc.
-  uses_gpu_for_inference: false                 # Must be false — see compute constraints
-  has_network_during_ranking: false             # Must be false — no API calls during ranking
-  pre_computation_required: false               # true if you pre-compute embeddings or train models offline
-  pre_computation_time_minutes: 0               # Approximate, if applicable
+  platform: "HP Laptop 15s-gr0xxx"                    
+  cpu_cores: 4                                  
+  ram_gb: 8                                    
+  python_version: "Python 3.12.5  "                      
+  os: "Windows 11 Home Single Language 25H2"                              
+  uses_gpu_for_inference: false                 
+  has_network_during_ranking: false             
+  pre_computation_required: false               
+  pre_computation_time_minutes: 0               
 
 # ============================================================================
 # AI tools declaration
 # ============================================================================
-# Transparency only — declared use is NOT penalized. Be honest. Stage 5 interview
-# may verify these declarations against your code; declarations that contradict
-# your code or your interview are flagged.
-ai_tools_used:
-  - "Claude"        # e.g. for architecture discussion, code review
-  - "GitHub Copilot"  # e.g. for autocomplete
-  # Other options: "ChatGPT", "Cursor", "Gemini", "Codeium", "Other", "None"
 
+ai_tools_used:
+  - "Google AI Mode"
+  - "ChatGPT"
+  - "Claude"  
+  
 ai_usage_summary: |
-  Briefly describe how AI tools were used. Examples:
-  - "Used Claude for code review and architectural discussion. Used Copilot for autocomplete.
-     No candidate data was fed to any LLM."
-  - "Used ChatGPT to debug Python issues and Cursor for refactoring."
-  - "No AI tools used."
+  Google AI Mode was used primarily for architecture brainstorming, implementation
+  guidance, debugging, and code generation during development. ChatGPT was used
+  for system design discussions, documentation, deployment guidance, research,
+  and architecture diagrams. Claude was used for code review, polishing,
+  refactoring suggestions, and improving code quality. All final design
+  decisions, implementation, testing, and validation were performed by the team.
+  No LLM was used during candidate ranking or inference; the final pipeline runs
+  fully offline without external AI or API calls.
 
 # ============================================================================
 # Approach summary (optional but recommended)
@@ -96,8 +84,8 @@ methodology_summary: |
 # Declarations
 # ============================================================================
 declarations:
-  read_submission_spec: true        # I have read submission_spec.md in full
-  code_is_original_work: true       # My code is my team's original work (using AI as a tool is fine)
-  no_collusion: true                # I have not coordinated my submission with other teams
-  honeypot_check_done: true        # OPTIONAL — set true if you explicitly checked for honeypots in your ranking
-  reproduction_tested: true         # I have tested that my reproduce_command runs end-to-end
+  read_submission_spec: true        
+  code_is_original_work: true       
+  no_collusion: true                
+  honeypot_check_done: true        
+  reproduction_tested: true         
