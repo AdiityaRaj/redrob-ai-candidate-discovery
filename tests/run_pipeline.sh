@@ -2,31 +2,26 @@
 
 set -euo pipefail
 
-echo "=================================================="
-echo " Redrob AI Candidate Discovery & Ranking Engine"
-echo " Reproducibility Pipeline"
-echo "=================================================="
+echo "=============================================="
+echo " Redrob AI Candidate Discovery Pipeline"
+echo "=============================================="
 
 echo ""
 echo "[1/3] Running ranking pipeline..."
-python main_cli.py
+
+python main_cli.py \
+    --jd ./data/raw/job_description.docx \
+    --candidates ./data/raw/candidates.jsonl \
+    --out ./submission.csv
 
 echo ""
-echo "[2/3] Validating generated submission..."
-
-if [ ! -f submission.csv ]; then
-    echo "ERROR: submission.csv was not generated."
-    exit 1
-fi
+echo "[2/3] Validating submission..."
 
 python validate_submission.py submission.csv
 
 echo ""
-echo "[3/3] Pipeline completed successfully."
+echo "[3/3] Completed."
 
 echo ""
-echo "Submission file generated:"
+echo "Generated file:"
 echo "submission.csv"
-
-echo ""
-echo "All validation checks passed."

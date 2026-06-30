@@ -10,7 +10,7 @@ primary_contact:
 
 team_members:
   - name: "Aditya Raj"
-    email: "rajaditya2424@gmail"
+    email: "rajaditya2424@gmail.com"
     role: "AI Engineer"          
   
 
@@ -27,7 +27,7 @@ reproduce_command: "python main_cli.py"
 # Compute environment
 # ============================================================================
 compute:
-  platform: "HP Laptop 15s-gr0xxx"                    
+  platform: "HP Laptop 15s-gr0xxx (AMD Ryzen 5 3450U)"                    
   cpu_cores: 4                                  
   ram_gb: 8                                    
   python_version: "Python 3.12.5  "                      
@@ -47,14 +47,16 @@ ai_tools_used:
   - "Claude"  
   
 ai_usage_summary: |
-  Google AI Mode was used primarily for architecture brainstorming, implementation
-  guidance, debugging, and code generation during development. ChatGPT was used
-  for system design discussions, documentation, deployment guidance, research,
-  and architecture diagrams. Claude was used for code review, polishing,
-  refactoring suggestions, and improving code quality. All final design
-  decisions, implementation, testing, and validation were performed by the team.
-  No LLM was used during candidate ranking or inference; the final pipeline runs
-  fully offline without external AI or API calls.
+  Google AI Mode was used for architecture brainstorming, implementation
+  assistance, debugging, and development support. ChatGPT was used for system
+  design discussions, documentation, deployment guidance, research, and
+  architecture diagrams. Claude was used for code review, refactoring
+  suggestions, and code quality improvements.
+
+  The final architecture, business rules, implementation, integration, testing,
+  validation, and tuning were completed by me. No LLM or external AI service
+  is used during candidate ranking or inference. The final pipeline executes
+  fully offline on CPU without external API calls.
 
 # ============================================================================
 # Approach summary (optional but recommended)
