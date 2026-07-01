@@ -255,7 +255,29 @@ The pipeline automatically performs:
 - Hybrid Scoring
 - Metadata-Based Explainability
 - Top-100 CSV Export
+---
+## 🌐 Run the Streamlit Dashboard
 
+To launch the interactive dashboard locally, execute:
+
+```bash
+streamlit run app/dashboard.py
+```
+
+After the server starts, open your browser and navigate to:
+
+```text
+http://localhost:8501
+```
+
+The dashboard provides an interactive interface to:
+
+- Upload a sample data (`.json/jsonl`)
+- Execute the offline ranking pipeline
+- View ranked candidates and explanations
+- Export the generated `submission.csv`
+
+---
 ---
 
 # ⭐ Single Reproduction Command
